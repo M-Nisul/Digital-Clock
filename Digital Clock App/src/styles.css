@@ -1,0 +1,95 @@
+:root{
+    --font1 : @import url(https://fonts.googleapis.com/css?family=Acme:regular);
+    --font2 : @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);   
+}
+body{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(90deg, #edc4b340, #e6b8a240, #deab9040, #d69f7e40, #cd977740, #c38e7040, #b07d6240, #9d6b5340), url('./img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    font-family: var(--font1);
+}
+#container{
+    width:50%;
+    height:80%;
+    border: #774936 10px solid;
+    border-radius:30px;
+    display:flex;
+    position:absolute;
+    inset:0;
+    margin:auto;
+    background-image:url('./img/bgs/bg\ 1.png');
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    flex-direction:column;
+    z-index:2;
+}
+.title{
+    justify-content: center;
+    padding: 20px 0px;
+    height:10%;
+    display:flex;
+}
+#head::after{
+    width:60px;
+    height:60px;
+    padding-left:20px;
+    border-radius: 40%;
+    background-image: url('./img/3d-alarm.png');
+    background-size:cover;
+    background-position: center;
+}
+
+#head{
+    align-items: center;
+    font-size:40px;
+    font-weight:bold;
+    color:#774936;
+    border-radius: 30px;
+    background: transparent;
+    width:390px;
+    border: #774936 3px solid;
+    transition: all 0.3s;
+}
+#head:hover{
+    background-color:#774936;
+    color:#fff;
+    box-shadow: 1px 1px 2px black, 0 0 25px #deab90, 0 0 5px #774936;
+    transform:translateY(-5px);
+    cursor:pointer;
+}
+.date__container{
+    width:50%;
+    height:60%;
+    padding: 5px 50px 5px 60px;
+    display:flex;
+    justify-content: space-between;
+    z-index:4;
+}
+
+.hours, .minutes, .seconds{   
+    margin: auto;
+    font-size:100px;
+    padding-left:40px;
+    color:black;
+}
+.bg{
+    z-index:-1;
+    background-color:white;
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+    inset:0;
+    margin: auto;
+    width:650px;
+    height: 300px;
+    bottom:50px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.137),  0 0 25px rgba(0, 0, 0, 0.527), 0 0 5px black;
+    right:10px;
+    border: black 8px solid;
+}
